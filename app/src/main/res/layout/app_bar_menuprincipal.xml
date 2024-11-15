@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPrincipal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_PerfilPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#bfc0c0"
+                android:title="Menu Principal"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imagenButtonPerfil"
+            android:layout_width="169dp"
+            android:layout_height="169dp"
+            android:layout_marginTop="30dp"
+            android:background="#4F5D75"
+            android:scaleType="centerInside"
+            android:src="@drawable/whatsapp_image_2024_05_27_at_16_55_30" />
+
+        <TextView
+            android:id="@+id/nombreUsuario"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fulanito Gomez Gonzalez"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/edadUsuario"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20 años"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/fechaDeNacimiento"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10/09/1998"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/Peso"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="90 kg"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/estatura"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="1.86 m"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/buttonRegistro"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#57AACE"
+            android:layout_marginTop="50dp"
+            android:text="Editar datos" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

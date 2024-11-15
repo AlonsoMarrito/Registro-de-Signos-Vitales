@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="Captura de signos">
+            <menu>
+                <item android:id="@+id/nav_item_frecuenciaCardiaca"
+                    android:icon="@drawable/abc_vector_test"
+                    android:title="Cardiaca"
+                    />
+                <item android:id="@+id/nav_item_temperatura"
+                    android:icon="@drawable/abc_vector_test"
+                    android:title="Temperatura"
+                    />
+                <item android:id="@+id/nav_item_spo2"
+                    android:icon="@drawable/abc_vector_test"
+                    android:title="Spo2"
+                    />
+            </menu>
+        </item>
+        <item android:id="@+id/nav_menuUsuario"
+            android:icon="@drawable/abc_vector_test"
+            android:title="Menu de usuario"
+            />
+        <item android:id="@+id/nav_item_two"
+            android:icon="@drawable/abc_vector_test"
+            android:title="Capturar todos los signos"
+            />
+        <item android:id="@+id/nav_item_listas"
+            android:icon="@drawable/abc_vector_test"
+            android:title="Tablas listadas"
+            />
+        <item android:id="@+id/nav_item_estadistica"
+            android:icon="@drawable/abc_vector_test"
+            android:title="Estadisticas"
+            />
+        <item android:id="@+id/nav_item_salir"
+            android:icon="@drawable/abc_vector_test"
+            android:title="Salir"
+            />
+    </group>
+
+</menu>
