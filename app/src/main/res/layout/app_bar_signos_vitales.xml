@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Listas">
+    tools:context=".Menu_De_Signos">
 
     <!-- AppBarLayout con el Toolbar en la parte superior -->
     <com.google.android.material.appbar.AppBarLayout
@@ -15,7 +15,7 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            app:layout_scrollFlags="scroll|enterAlways">
+           >
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_PerfilPrincipal"
@@ -39,10 +39,9 @@
                 android:textAlignment="center">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textoDeClase"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Historial de registros"
                     android:textColor="#bfc0c0"
                     android:textStyle="bold"
                     android:textSize="20dp"
@@ -63,46 +62,35 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/buttonVerInicio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#bfc0c0"
-                    android:layout_marginRight="20dp"
-                    android:text="Ver inicio"
-                    android:textColor="#000000" />
-
-                <Button
                     android:id="@+id/buttonVerHistorial"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E48B4E"
-                    android:layout_marginLeft="20dp"
-                    android:text="Historial"
+                    android:text="Ver el historial"
                     android:textColor="#000000" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="210dp"
-        android:layout_marginBottom="80dp"
-        />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        app:cardBackgroundColor="#4F5D75">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/ViewPagerAdapterListas"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#bfc0c0"
-        app:tabGravity="fill"
-        app:tabIconTint="#A9A9A9"
-        app:tabIndicatorColor="#57AACE"
-        app:tabMode="fixed"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/buttonConectar"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:backgroundTint="#57AACE"
+            android:text="Conectar dispositivo"
+            android:textColor="#000000" />
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

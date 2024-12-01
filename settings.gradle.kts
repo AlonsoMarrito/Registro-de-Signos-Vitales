@@ -11,13 +11,21 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }  // Sintaxis correcta en Kotlin DSL
     }
 }
 
 rootProject.name = "RegistroDeSignosVitales"
 include(":app")
+
+maven { url = uri("https://jitpack.io") }
+
+fun maven(action: MavenArtifactRepository.() -> Unit) {
+
+}

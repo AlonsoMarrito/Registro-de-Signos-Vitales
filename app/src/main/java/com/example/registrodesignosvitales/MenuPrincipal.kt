@@ -4,7 +4,6 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.provider.MediaStore
 import android.text.InputType
 import android.view.MenuItem
 import android.widget.Button
@@ -18,6 +17,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
@@ -43,23 +43,53 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
-        val buttonRegistro = findViewById<Button>(R.id.buttonRegistro)
-        val imagenButtonPerfil = findViewById<ImageButton>(R.id.imagenButtonPerfil)
-        val edadUsuario = findViewById<TextView>(R.id.edadUsuario)
-        val fechaDeNacimiento = findViewById<TextView>(R.id.fechaDeNacimiento)
-        val Peso = findViewById<TextView>(R.id.Peso)
-        val estatura = findViewById<TextView>(R.id.estatura)
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
+        var buttonVerHistiarl: Button = findViewById<Button>(R.id.buttonVerHistorial)
 
-        buttonRegistro.setOnClickListener(){
-            showAlertDialog()
+        buttonVerHistiarl.setOnClickListener(){
+            val intent = Intent(this, Listas::class.java)
+            startActivity(intent)
         }
 
-        imagenButtonPerfil.setOnClickListener(){
-            Toast.makeText(this, "hola", Toast.LENGTH_LONG).show()
+        var cardViewCorazon: CardView = findViewById(R.id.buttonEntrarAcardiacas)
+        var cardViewSpo2: CardView = findViewById(R.id.buttonEntrarAspo2)
+        var cardViewTemperatura: CardView = findViewById(R.id.buttonEntrarAtemperatura)
+        var cardViewTodos: CardView = findViewById(R.id.buttonEntrarAtodos)
+        var cardViewNosotros: CardView = findViewById(R.id.buttonEntrarNosotros)
+
+
+        cardViewCorazon.setOnClickListener(){
+            val intent = Intent(this, Menu_De_Signos::class.java)
+            intent.putExtra("clave_texto", "mi frecuencia cardica")
+            startActivity(intent)
         }
+
+        cardViewSpo2.setOnClickListener(){
+            val intent = Intent(this, Menu_De_Signos::class.java)
+            intent.putExtra("clave_texto", "de mi saturacion de oxigeno")
+            startActivity(intent)
+        }
+
+        cardViewTemperatura.setOnClickListener(){
+            val intent = Intent(this, Menu_De_Signos::class.java)
+            intent.putExtra("clave_texto", "de mi temperatura")
+            startActivity(intent)
+        }
+
+        cardViewTodos.setOnClickListener(){
+            val intent = Intent(this, Menu_De_Signos::class.java)
+            intent.putExtra("clave_texto", "Todos mis signos")
+            startActivity(intent)
+        }
+
+        cardViewNosotros.setOnClickListener(){
+            val intent = Intent(this, Menu_De_Signos::class.java)
+            intent.putExtra("clave_texto", "Ad Astra")
+            startActivity(intent)
+        }
+
     }
 
 
@@ -69,11 +99,6 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
-            R.id.nav_item_listas -> {
-                val intent = Intent(this, listas::class.java)
-                startActivity(intent)
-            }
-            R.id.nav_item_frecuenciaCardiaca -> Toast.makeText(this, "Presionado cardiaca", Toast.LENGTH_SHORT).show()
         }
         drawer.closeDrawer(GravityCompat.START)
         return true;
@@ -159,7 +184,4 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         alertDialog.show()
     }
 
-        private fun openGallery() {
-            //galleryLauncher.launch("image/*")
-        }
 }

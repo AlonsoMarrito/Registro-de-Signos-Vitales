@@ -6,11 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawe_layout"
     android:background="#4F5D75"
-    tools:context=".MenuPrincipal"
+    tools:context=".Menu_De_Signos"
     tools:openDrawer="start">
 
     <include
-        layout="@layout/app_bar_menuprincipal"
+        layout="@layout/app_bar_signos_vitales"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
@@ -23,6 +23,6 @@
         app:headerLayout="@layout/nav_header_menuprincipal"
         app:menu="@menu/activity_menuprincipal_drawe"
         android:background="#bfc0c0"
-    />
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

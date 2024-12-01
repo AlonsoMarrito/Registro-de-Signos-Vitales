@@ -13,88 +13,337 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways">
+            android:layout_height="60dp"
+            >
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_PerfilPrincipal"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="60dp"
                 android:background="#bfc0c0"
                 android:title="Menu Principal"
                 app:layout_collapseMode="pin" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="#3E4C63">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textAlignment="center">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hola, Alonso"
+                    android:textAlignment="center"
+                    android:textColor="#bfc0c0"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:cardBackgroundColor="#4F5D75">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#E48B4E"
+                    android:text="Inicio"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/buttonVerHistorial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:backgroundTint="#bfc0c0"
+                    android:text="Ver historial"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <!-- El contenido desplazable debe estar en un NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="64dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
-        <ImageButton
-            android:id="@+id/imagenButtonPerfil"
-            android:layout_width="169dp"
-            android:layout_height="169dp"
-            android:layout_marginTop="30dp"
-            android:background="#4F5D75"
-            android:scaleType="centerInside"
-            android:src="@drawable/whatsapp_image_2024_05_27_at_16_55_30" />
-
-        <TextView
-            android:id="@+id/nombreUsuario"
-            android:layout_marginTop="25dp"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fulanito Gomez Gonzalez"
-            android:textColor="#FFFFFF"
-            android:textAlignment="center" />
+            android:layout_marginTop="200dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            app:cardBackgroundColor="#4F5D75">
 
-        <TextView
-            android:id="@+id/edadUsuario"
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="20 años"
-            android:textColor="#FFFFFF"
-            android:textAlignment="center" />
+            <!-- Primer encabezado -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#4F5D75"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:textAlignment="center"
+                app:cardBackgroundColor="#4F5D75">
 
-        <TextView
-            android:id="@+id/fechaDeNacimiento"
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="10/09/1998"
-            android:textColor="#FFFFFF"
-            android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Toma de signos vitales"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/Peso"
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="90 kg"
-            android:textColor="#FFFFFF"
-            android:textAlignment="center" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#4F5D75">
 
-        <TextView
-            android:id="@+id/estatura"
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:text="1.86 m"
-            android:textAlignment="center" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/buttonEntrarAcardiacas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    app:cardBackgroundColor="#4F5D75">
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="170dp"
+                        android:background="@drawable/rounded_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/textFc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Frecuencia cardiaca"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imgFc"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/rounded_backgrounfc"
+                            app:srcCompat="@drawable/heartfc" />
+                        <TextView
+                            android:id="@+id/textAvgFc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Avg: 80"
+                            android:textAlignment="center"
+                            android:textColor="#738F30"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        <Button
-            android:id="@+id/buttonRegistro"
-            android:layout_width="192dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#57AACE"
-            android:layout_marginTop="50dp"
-            android:text="Editar datos" />
-    </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/buttonEntrarAspo2"
+                    app:cardBackgroundColor="#4F5D75">
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="170dp"
+                        android:background="@drawable/rounded_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/textSpo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Saturacion de oxigeno"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imgSpo2"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/rounded_backgrounspo2"
+                            app:srcCompat="@drawable/spo2" />
+                        <TextView
+                            android:id="@+id/textAvgSpo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Avg: 80"
+                            android:textAlignment="center"
+                            android:textColor="#743F3F"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#4F5D75">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/buttonEntrarAtemperatura"
+                    app:cardBackgroundColor="#4F5D75">
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="170dp"
+                        android:background="@drawable/rounded_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/textTemp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Temperatura corporal"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imgTemp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/rounded_backgrountemp"
+                            app:srcCompat="@drawable/temperaturetk" />
+                        <TextView
+                            android:id="@+id/textAvgTemp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Avg: 80"
+                            android:textAlignment="center"
+                            android:textColor="#E48B4E"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/buttonEntrarAtodos"
+                    app:cardBackgroundColor="#4F5D75">
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="170dp"
+                        android:background="@drawable/rounded_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/textView64"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Todas"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imgTodas"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="10dp"
+                            app:srcCompat="@drawable/relojes_login" />
+                        <TextView
+                            android:id="@+id/Todas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ult. toma: 12/12/2024"
+                            android:textAlignment="center"
+                            android:textColor="#C9886E"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#4F5D75">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/buttonEntrarNosotros"
+                    app:cardBackgroundColor="#4F5D75">
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="170dp"
+                        android:background="@drawable/rounded_background"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <TextView
+                            android:id="@+id/tetxoNosotros"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nosotros"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/ImagNosotros"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#FF3D00"
+                            app:srcCompat="@drawable/whatsapp_image_2024_11_09_at_15_36_36" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

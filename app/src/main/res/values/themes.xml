@@ -6,6 +6,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="Theme.RegistroDeSignosVitales" parent="Base.Theme.RegistroDeSignosVitales" />
 
 </resources>
