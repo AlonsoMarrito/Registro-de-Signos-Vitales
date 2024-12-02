@@ -1,4 +1,4 @@
-package com.example.registrodesignosvitales
+package com.example.registrodesignosvitales.ui
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -6,14 +6,13 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import com.ingenieriajhr.blujhr.BluJhr
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.registrodesignosvitales.R
 import com.google.android.material.navigation.NavigationView
 
 class Menu_De_Signos : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

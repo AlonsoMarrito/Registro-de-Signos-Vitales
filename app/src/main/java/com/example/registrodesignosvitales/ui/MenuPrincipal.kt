@@ -1,4 +1,4 @@
-package com.example.registrodesignosvitales
+package com.example.registrodesignosvitales.ui
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -8,9 +8,7 @@ import android.text.InputType
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -20,6 +18,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.registrodesignosvitales.R
 import com.google.android.material.navigation.NavigationView
 
 class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -38,7 +37,10 @@ class MenuPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         drawer = findViewById(R.id.drawe_layout)
 
-        toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigator_drawer_open, R.string.navigator_drawer_close)
+        toggle = ActionBarDrawerToggle(this, drawer, toolbar,
+            R.string.navigator_drawer_open,
+            R.string.navigator_drawer_close
+        )
         drawer.addDrawerListener(toggle)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

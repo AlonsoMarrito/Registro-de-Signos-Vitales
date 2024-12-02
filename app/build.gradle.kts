@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.example.registrodesignosvitales"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.registrodesignosvitales"
-        minSdk = 23
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -37,20 +37,27 @@ android {
         viewBinding = true
     }
 }
+        dependencies {
 
-dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation (libs.androidx.core.ktx)
+    implementation (libs.androidx.appcompat)
+    implementation (libs.material)
+    implementation (libs.postgresql)
+    implementation (libs.libreria.pcs)
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
+    implementation ("org.postgresql:postgresql:42.7.4")
     implementation ("com.google.android.material:material:1.8.0")
     implementation ("androidx.viewpager2:viewpager2:1.0.0")
-    implementation ("org.postgresql:postgresql:42.2.22")
+    implementation ("org.postgresql:postgresql:42.2.23")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
     implementation ("androidx.cardview:cardview:1.0.0")
     implementation ("com.github.jose-jhr:blueJhrLibrary:0.1.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)

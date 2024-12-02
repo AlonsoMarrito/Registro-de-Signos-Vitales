@@ -1,4 +1,4 @@
-package com.example.registrodesignosvitales
+package com.example.registrodesignosvitales.ui
 
 import android.Manifest
 import android.content.Intent
@@ -8,7 +8,6 @@ import android.graphics.PorterDuff
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -20,6 +19,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.registrodesignosvitales.R
 import com.ingenieriajhr.blujhr.BluJhr
 
 class Vista_bluetooth : AppCompatActivity() {

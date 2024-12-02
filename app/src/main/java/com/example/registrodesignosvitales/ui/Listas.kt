@@ -1,14 +1,11 @@
-package com.example.registrodesignosvitales
+package com.example.registrodesignosvitales.ui
 
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.text.InputType
-import android.util.Log
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
@@ -21,8 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.example.registrodesignosvitales.R
 import com.example.registrodesignosvitales.todas_las_listas.Todas_Las_Tomas
 import com.example.registrodesignosvitales.todas_las_listas.Tomas_FC
 import com.example.registrodesignosvitales.todas_las_listas.Tomas_Spo2

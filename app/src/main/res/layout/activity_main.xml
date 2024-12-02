@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4F5D75"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <!-- CardView Principal -->
     <androidx.cardview.widget.CardView
@@ -99,6 +99,7 @@
                 android:backgroundTint="#57AACE"
                 android:text="Cancelar"
                 android:textColor="#000000" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

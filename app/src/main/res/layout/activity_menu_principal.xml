@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawe_layout"
     android:background="#4F5D75"
-    tools:context=".MenuPrincipal"
+    tools:context=".ui.MenuPrincipal"
     tools:openDrawer="start">
 
     <include
